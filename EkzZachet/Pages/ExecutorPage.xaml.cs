@@ -1,5 +1,4 @@
-﻿using EkzZachet.Pages;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,23 +13,27 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace EkzZachet
+namespace EkzZachet.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для ExecutorPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ExecutorPage : Page
     {
-        public MainWindow()
+        public ExecutorPage()
         {
             InitializeComponent();
-            MainFrame.Navigate(new Authorisation());
-            Manager1.MainFrame = MainFrame;
+
+        }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+
         }
 
         private void MainFrame_ContentRendered(object sender, EventArgs e)
         {
-
+           
         }
     }
 }
