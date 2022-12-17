@@ -1,0 +1,37 @@
+﻿<Window x:Class="EkzZachet.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EkzZachet"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="1000" MinHeight="600" MinWidth="1000">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+           
+        </Grid.RowDefinitions>
+
+        <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <!--<StackPanel Orientation="Horizontal">
+                <TextBlock Text="Введите название для поиска:" Width="175" TextAlignment="Right"></TextBlock>
+                <TextBox Width="225" Name="TboxSearch" TextChanged="TboxSearch_TextChanged"></TextBox>
+            </StackPanel>-->
+            <!--<StackPanel Orientation="Horizontal">
+                <TextBlock Text="Выберит тип:" Width="175" TextAlignment="Right"></TextBlock>
+                <ComboBox Width="225" Name="ComboType" SelectionChanged="ComboType_SelectionChanged" DisplayMemberPath="Name"></ComboBox>
+            </StackPanel>-->
+            <!--<CheckBox x:Name="CheckActual" Checked="CheckActual_Checked" Unchecked="CheckActual_Unchecked" Content="Показывать только акьуальнеы туры" HorizontalAlignment="Center"></CheckBox>-->
+        </WrapPanel>
+        <Grid Grid.Row="0" Background="#4db2d8"></Grid>
+        <Grid Grid.Row="1" Background="#d7e7f5"></Grid>
+
+        <TextBlock Text="Зарплата" FontFamily="Comic Sans" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="76,0,0,0"></TextBlock>
+        <!--<Button Content="Назад" FontSize="25" FontFamily="Calibri" Name="btnBack" Click="btnBack_Click" Foreground="Black" Background="#FF00D9BB" HorizontalAlignment="Left"  Width="175" Height="40" Margin="785,18,0,17"></Button>-->
+        <!--<Frame NavigationUIVisibility="Hidden" ContentRendered="MainFrame_ContentRendered" Grid.Row="1" Name="MainFrame"></Frame>-->
+        <Image Source="Resources/logo-full.png" HorizontalAlignment="Left"></Image>
+        
+
+    </Grid>
+</Window>
