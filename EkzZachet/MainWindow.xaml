@@ -10,20 +10,23 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="80"/>
             <RowDefinition Height="*"/>
-           
+
         </Grid.RowDefinitions>
 
-        <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
-            <!--<StackPanel Orientation="Horizontal">
+        <!--<WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            -->
+        <!--<StackPanel Orientation="Horizontal">
                 <TextBlock Text="Введите название для поиска:" Width="175" TextAlignment="Right"></TextBlock>
                 <TextBox Width="225" Name="TboxSearch" TextChanged="TboxSearch_TextChanged"></TextBox>
             </StackPanel>-->
-            <!--<StackPanel Orientation="Horizontal">
+        <!--<StackPanel Orientation="Horizontal">
                 <TextBlock Text="Выберит тип:" Width="175" TextAlignment="Right"></TextBlock>
                 <ComboBox Width="225" Name="ComboType" SelectionChanged="ComboType_SelectionChanged" DisplayMemberPath="Name"></ComboBox>
             </StackPanel>-->
-            <!--<CheckBox x:Name="CheckActual" Checked="CheckActual_Checked" Unchecked="CheckActual_Unchecked" Content="Показывать только акьуальнеы туры" HorizontalAlignment="Center"></CheckBox>-->
-        </WrapPanel>
+        <!--<CheckBox x:Name="CheckActual" Checked="CheckActual_Checked" Unchecked="CheckActual_Unchecked" Content="Показывать только акьуальнеы туры" HorizontalAlignment="Center"></CheckBox>-->
+        <!--
+        </WrapPanel>-->
+
         <Grid Grid.Row="0" Background="#4db2d8"></Grid>
         <Grid Grid.Row="1" Background="#d7e7f5"></Grid>
 
@@ -32,6 +35,30 @@
         <!--<Frame NavigationUIVisibility="Hidden" ContentRendered="MainFrame_ContentRendered" Grid.Row="1" Name="MainFrame"></Frame>-->
         <Image Source="Resources/logo-full.png" HorizontalAlignment="Left"></Image>
         
+        <Grid Name="ToolBar" Grid.Row="0">
+            <Polygon Fill="White" Opacity="0.2"
+                 Points="107,0
+                 115,7,
+                 249,7,
+                 257,0"/>
+        </Grid>
+        <Grid Name="LogoContainer" Grid.Row="1">
+        </Grid>
+        <TextBlock Text="Логин"
+                   Style="{StaticResource textAvt}" Margin="216,108,0,0" VerticalAlignment="Top" Grid.Row="1" />
+        <TextBlock Grid.Row="1" Text="Пароль"
+                   Style="{StaticResource textAvt}" Margin="212,164,0,0" VerticalAlignment="Top" />
+        <PasswordBox Name="Password" Grid.Row="1"
+                 Style="{StaticResource psbTxtb}" Margin="320,164,360,0" VerticalAlignment="Top" Height="40"/>
+        <Button Grid.Row="1" Name="btnSubmit" 
+                Style="{StaticResource BtnAutho}" FontWeight="Bold"
+                Content="Исполнитель"  VerticalAlignment="Top" Margin="320,329,0,0" HorizontalAlignment="Left" Width="320"/>
+        <Button Grid.Row="1" Name="btnManager" 
+                Style="{StaticResource BtnAutho}" FontWeight="Bold"
+                Content="Менеджер"  Margin="320,252,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="320"/>
+        <PasswordBox x:Name="Password_Copy" Grid.Row="1"
+            Style="{StaticResource psbTxtb}" Margin="320,104,360,0" VerticalAlignment="Top" Height="40"/>
 
     </Grid>
+
 </Window>
