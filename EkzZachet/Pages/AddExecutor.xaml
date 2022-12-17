@@ -28,7 +28,7 @@
         </Grid.RowDefinitions>
         <Image Source="/Resources/logo-full.png" HorizontalAlignment="Left" Margin="10,5,0,5"
                Grid.Row="0" Grid.ColumnSpan="2"/>
-        <Button Content="Выход" Width="150" Height="40" Grid.Column="2"
+        <Button Content="Назад" Width="150" Height="40" Grid.Column="2"
                     Background="#FFF02A53" Foreground="White"
                     FontSize="16" HorizontalAlignment="Right" Margin="0,0,20,0"
                     Name="BtnBack" Click="BtnBack_Click"></Button>

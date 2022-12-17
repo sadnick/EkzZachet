@@ -73,7 +73,7 @@ namespace EkzZachet.Pages
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)
         {
-
+            Manager1.MainFrame.GoBack();
         }
     }
 }
