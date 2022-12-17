@@ -24,5 +24,10 @@ namespace EkzZachet.Pages
         {
             InitializeComponent();
         }
+
+        private void btnSubmit_Click(object sender, RoutedEventArgs e)
+        {
+            Manager1.MainFrame.Navigate(new ExecutorPage());
+        }
     }
 }

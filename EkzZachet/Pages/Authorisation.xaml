@@ -52,7 +52,7 @@
                    Style="{StaticResource textAvt}" Margin="212,164,0,0" VerticalAlignment="Top" />
         <PasswordBox Name="Password" Grid.Row="1"
                  Style="{StaticResource psbTxtb}" Margin="320,164,360,0" VerticalAlignment="Top" Height="40"/>
-        <Button Grid.Row="1" Name="btnSubmit" 
+        <Button Grid.Row="1" Name="btnSubmit"  Click="btnSubmit_Click"
                 Style="{StaticResource BtnAutho}" FontWeight="Bold"
                 Content="Исполнитель"  VerticalAlignment="Top" Margin="320,329,0,0" HorizontalAlignment="Left" Width="320"/>
         <Button Grid.Row="1" Name="btnManager" 

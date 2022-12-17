@@ -23,17 +23,57 @@ namespace EkzZachet.Pages
         public ExecutorPage()
         {
             InitializeComponent();
-
+            DGridExecutor.ItemsSource = EkzEntities.GetContext().Task.ToList();
         }
 
-        private void btnBack_Click(object sender, RoutedEventArgs e)
+        //private void BtnEdit_Click(object sender, RoutedEventArgs e)
+        //{
+        //    //Manager.MainFrame.Navigate(new AddEditPageE((sender as Button).DataContext as Task));
+        //}
+
+        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            //Manager.MainFrame.Navigate(new AddEditPageE(null));
+            MessageBox.Show("В данный момент вы не можете добавить данные. " +
+                "Данная функция находиться в разработке!");
+        }
+
+        private void BtnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            var taskForRemoving = DGridExecutor.SelectedItems.Cast<Task>().ToList();
+
+            if (MessageBox.Show($"Вы точно хотите удалить следующие {taskForRemoving.Count()} элементов?", "Внимание",
+                MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    EkzEntities.GetContext().Task.RemoveRange(taskForRemoving);
+                    EkzEntities.GetContext().SaveChanges();
+                    MessageBox.Show("Данные удалены!");
+
+                    DGridExecutor.ItemsSource = EkzEntities.GetContext().Task.ToList();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+            }
+        }
+
+        private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            EkzEntities.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
+            DGridExecutor.ItemsSource = EkzEntities.GetContext().Task.ToList();
+        }
+
+        private void BtnEdit_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void MainFrame_ContentRendered(object sender, EventArgs e)
+        private void BtnBack_Click(object sender, RoutedEventArgs e)
         {
-           
+
         }
     }
 }
