@@ -35,7 +35,7 @@ namespace EkzZachet.Pages
         {
             //Manager.MainFrame.Navigate(new AddEditPageE(null));
             MessageBox.Show("В данный момент вы не можете добавить данные. " +
-                "Данная функция находиться в разработке!");
+                "Данная функция находится в разработке");
         }
 
         private void BtnDelete_Click(object sender, RoutedEventArgs e)
@@ -68,7 +68,7 @@ namespace EkzZachet.Pages
 
         private void BtnEdit_Click(object sender, RoutedEventArgs e)
         {
-
+            Manager1.MainFrame.Navigate(new AddExecutor((sender as Button).DataContext as Task));
         }
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)

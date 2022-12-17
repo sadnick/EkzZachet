@@ -25,7 +25,7 @@
                 <DataGridTextColumn Header="Заголовок задачи" Binding="{Binding Title}" Width="200"></DataGridTextColumn>
                 <DataGridTextColumn Header="Описание задачи" Binding="{Binding Description}" Width="*"></DataGridTextColumn>
                 <DataGridTextColumn Header="Срок исполнения" Binding="{Binding CreateDateTime}" Width="*"></DataGridTextColumn>
-                <DataGridTextColumn Header="Дата выполнения" Binding="{Binding CompletedDateTime}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Дата выполнения" Binding="{Binding CompletedDate}" Width="*"></DataGridTextColumn>
                 <DataGridTextColumn Header="Сложность задачи" Binding="{Binding Difficulty}" Width="*"></DataGridTextColumn>
                 <DataGridTextColumn Header="Время на выполнение задачи" Binding="{Binding Time}" Width="*"></DataGridTextColumn>
                 <DataGridTextColumn Header="Исполнитель задачи" Binding="{Binding Title}" Width="*"></DataGridTextColumn>
