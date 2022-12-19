@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace EkzZachet.Pages
 {
@@ -23,6 +24,11 @@ namespace EkzZachet.Pages
         public Authorisation()
         {
             InitializeComponent();
+            DispatcherTimer timer = new DispatcherTimer(TimeSpan.FromSeconds(1), DispatcherPriority.Normal, (object s, EventArgs ev) =>
+            {
+                this.myDateTime.Text = DateTime.Now.ToString("yyyy/MM/dd");
+            }, this.Dispatcher);
+            timer.Start();
         }
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)

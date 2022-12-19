@@ -12,10 +12,20 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="80"/>
             <RowDefinition Height="*"/>
-
         </Grid.RowDefinitions>
 
-        <!--<WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
+        <StatusBar Grid.Row="1" Background="#4db2d8" 
+                    Width="200" Height="30"
+                    HorizontalAlignment="Left" VerticalAlignment="Bottom"
+                    Margin="20,0,0,100">
+            <TextBlock FontSize="16"
+                       Text="Дата текущая: " HorizontalAlignment="Left"/>
+            <TextBlock FontSize="16"
+                       x:FieldModifier="private" x:Name="myDateTime"
+                       Foreground="#FFF02A53"/>
+            </StatusBar>
+
+            <!--<WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
             -->
         <!--<StackPanel Orientation="Horizontal">
                 <TextBlock Text="Введите название для поиска:" Width="175" TextAlignment="Right"></TextBlock>
@@ -30,7 +40,7 @@
         </WrapPanel>-->
 
         <Grid Grid.Row="0" Background="#4db2d8"></Grid>
-        <Grid Grid.Row="1" Background="#d7e7f5"></Grid>
+       
 
         <TextBlock Text="Зарплата" FontFamily="Comic Sans" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="76,0,0,0"></TextBlock>
         <!--<Button Content="Назад" FontSize="25" FontFamily="Calibri" Name="btnBack" Click="btnBack_Click" Foreground="Black" Background="#FF00D9BB" HorizontalAlignment="Left"  Width="175" Height="40" Margin="785,18,0,17"></Button>-->

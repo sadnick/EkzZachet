@@ -6,9 +6,10 @@
         xmlns:local="clr-namespace:EkzZachet"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="1000">
-    <Grid>
+    <Grid Background="#d7e7f5">
         <Frame Name="MainFrame" NavigationUIVisibility="Hidden"
                ContentRendered="MainFrame_ContentRendered"></Frame>
+        
     </Grid>
 
 </Window>
